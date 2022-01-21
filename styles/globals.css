@@ -1,0 +1,29 @@
+@import "./navbar.css";
+@import "./home.css";
+@import "./tvremote.css";
+@import "./tvscreen.css";
+@import "./number.css";
+@import "./leftPage.css";
+@import "./blog.css";
+@import "./rightPage.css";
+@import "./button.css";
+@import "./scroll.css";
+@import "./sliderpage.css";
+@import "./blogpage.css";
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}

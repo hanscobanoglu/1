@@ -1,0 +1,47 @@
+{
+  "name": "hansnextjs",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "relay": "relay-compiler --src ./ --schema ./data/schema.json --language typescript --exclude '**/.next/**' '**/node_modules/**' '**/test/**'  '**/__generated__/**' --artifactDirectory ./src/__generated__",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@types/react-relay": "^11.0.3",
+    "@types/relay-compiler": "^8.0.2",
+    "@types/relay-runtime": "^12.0.1",
+    "@zeit/next-css": "^1.0.1",
+    "@zeit/next-less": "^1.0.1",
+    "babel-plugin-relay": "^12.0.0",
+    "dotenv": "^10.0.0",
+    "formik": "^2.2.9",
+    "graphql": "^15.0.0",
+    "next": "12.0.1",
+    "next-compose-plugins": "^2.2.1",
+    "path": "^0.12.7",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-relay": "^12.0.0",
+    "react-timer-hook": "^3.0.5",
+    "relay-compiler": "^12.0.0",
+    "relay-compiler-language-typescript": "^15.0.0",
+    "relay-config": "^12.0.1",
+    "relay-hooks": "^6.0.0",
+    "relay-runtime": "^12.0.0",
+    "semantic-ui-css": "^2.4.1",
+    "semantic-ui-react": "^2.0.4",
+    "yarn": "^1.22.17",
+    "yup": "^0.32.11"
+  },
+  "devDependencies": {
+    "@babel/plugin-transform-runtime": "^7.16.5",
+    "@types/node": "16.11.6",
+    "@types/react": "17.0.33",
+    "eslint": "7.32.0",
+    "eslint-config-next": "12.0.1",
+    "typescript": "^4.5.4"
+  }
+}

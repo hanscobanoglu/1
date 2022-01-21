@@ -1,0 +1,75 @@
+@keyframes transparenteffectclose {
+	0% {
+		opacity: 100%;
+	}
+	50% {
+		opacity: 50%;
+	}
+	100% {
+		opacity: 0%;
+	}
+}
+
+@keyframes transparenteffectopen {
+	0% {
+		opacity: 0%;
+	}
+	50% {
+		opacity: 50%;
+	}
+	100% {
+		opacity: 100%;
+	}
+}
+
+
+
+
+.height-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.height{
+  overflow-y: hidden;
+  color: white;
+  text-align: center;
+  align-items: center;
+}
+.height-wrapper{
+
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.heightproject-comp{
+  height: 100vh;
+}
+.height-text-container{
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.height-text-wrapper{
+  height: 35%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.heightproject-comp-effectclose{
+  animation: transparenteffectclose 2s normal forwards;
+ 
+  height: 100vh;
+}
+.heightproject-comp-effectopen{
+  animation: transparenteffectopen 2s normal forwards;
+  
+  height: 100vh;
+}
+::-webkit-scrollbar {
+  width: 0px;
+}
+

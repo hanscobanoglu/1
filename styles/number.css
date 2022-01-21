@@ -1,0 +1,20 @@
+.Number-Container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+ 
+}
+.Number-Wrapper {
+    align-items: center;
+    display: flex;
+    font-size: 40px;
+    justify-content: center;   
+}
+.button-text{
+    cursor: pointer;
+    text-decoration: none;
+    background-color: transparent;
+    border-color: transparent;
+    font-size: 60px;
+    color: #3d3d3d;
+}

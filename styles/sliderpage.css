@@ -1,0 +1,35 @@
+.slider-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  position:absolute;
+}
+.slider-img-wrapper{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 93vh;
+}
+
+.sliderbutton-container{
+  
+  display: flex;
+  position:absolute;
+  z-index: 1;
+  height: 93vh;  
+  width: 100%;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  padding: 7%;
+  padding-top: 30%;
+}
+.sliderbutton-title-wrapper{
+  cursor: pointer;
+  text-decoration: none;
+  background-color: transparent;
+  border:none;
+  font-size: 40px;
+  color: white;
+}

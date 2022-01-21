@@ -1,0 +1,19 @@
+.home-container {
+  
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.home-remate-wrapper {
+  height: 60vh;
+  width: 50%;
+}
+.emty {
+  width: 20px;
+}
+.home-screen-wrapper {
+  height: 60vh;
+  width: 50%;
+}

@@ -1,0 +1,53 @@
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+.rightpage-container{
+    height: 60vh;
+    width: 100%;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: Hidden;   
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 20s ease infinite;
+    
+}
+.rightpage-wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+.rightpage-title{
+    text-align: justify;
+    justify-content: left;
+    margin: 0px;
+}
+.rightpage-subtext{
+    margin-top: 15px;
+    margin-bottom: 15px;
+    text-align: justify;
+    margin-left: 10%;
+    margin-right: 20%;
+    font-size: 20px;
+    font-style:italic;
+    font-weight: lighter;
+}
+.rightpage-aligin {
+    font-size: 15px;
+    font-weight: bold;
+}
