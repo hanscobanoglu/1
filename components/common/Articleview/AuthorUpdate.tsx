@@ -1,16 +1,15 @@
 import React, { FunctionComponent, useMemo } from "react";
 import router from 'next/router';
 import { useQuery,STORE_OR_NETWORK, commitMutation } from "relay-hooks";
-import AUTHOR_SINGLE_QUERY,{ AuthorSingleQuery } from "../../../src/__generated__/AuthorSingleQuery.graphql";
-import UPDATE_AUTHOR from "../../../src/__generated__/AuthorUptadeMutation.graphql"
 import { Button, Form } from "semantic-ui-react";
-import Input from "../Input/Input";
-
-
-
 import { useFormik } from "formik";
 import * as Yup from 'yup';
+
+import AUTHOR_SINGLE_QUERY,{ AuthorSingleQuery } from "../../../src/__generated__/AuthorSingleQuery.graphql";
+import UPDATE_AUTHOR from "../../../src/__generated__/AuthorUptadeMutation.graphql"
 import environment from "../../../relay/environment";
+
+import Input from "../Input/Input";
 
 const AuthorUpdate: FunctionComponent = () => {
   const id = router.query.id || '';
@@ -61,7 +60,6 @@ const AuthorUpdate: FunctionComponent = () => {
        //handleRedirect();
        console.log("RESTEN GELEN VERĞ",res);
        document.location.href = 'author-list'
-      
       },
       onError: (err) => {
         console.log(err);

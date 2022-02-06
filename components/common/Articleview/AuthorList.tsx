@@ -29,7 +29,7 @@ const AuthorList: FunctionComponent = () => {
         //handleRedirect();
         console.log("RESTEN GELEN VERĞ", res);
         setOpen(false);
-        window.location.reload(false);
+        window.location.reload();
       },
       onError: (err) => {
         console.log(err);

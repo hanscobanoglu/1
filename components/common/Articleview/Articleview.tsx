@@ -10,6 +10,7 @@ import CreateDeneme from "./CreateArticle1";
 import CreateCategory from "./CreateCategory";
 import AuthorList from "./AuthorList";
 import CategoryList from "./CategoryList";
+import BookArticleList from "./BookArticleList";
 
 const Articleview: FunctionComponent = () => {
   const router = useRouter();
@@ -28,7 +29,7 @@ const Articleview: FunctionComponent = () => {
   return (
     <div className="article-container">
       <div className="article-wrapper">
-        <div className="component-container"><CreateDeneme /></div>
+        <div className="component-container"><BookArticleList /></div>
         
         <div className="component-container"><AuthorList /></div>
        <div className="component-container"><CategoryList /></div>

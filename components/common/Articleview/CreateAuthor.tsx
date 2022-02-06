@@ -47,7 +47,7 @@ const handleMutation = (authorName: string): void => {
     onCompleted: (res) => {
      //handleRedirect();
      console.log("RESTEN GELEN VERĞ",res);
-     window.location.reload(false);
+     window.location.reload();
     },
     onError: (err) => {
       console.log(err);
