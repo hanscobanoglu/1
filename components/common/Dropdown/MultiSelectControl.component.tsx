@@ -3,8 +3,8 @@ import React, { FunctionComponent } from 'react';
 import SelectControl from './SelectControl.component';
 
 export interface MultiSelectControlProps {
-  name: string;
-  label: string;
+  name?: string;
+  label?: string;
   options: any;
   inputProps: any;
   prepend?: any;

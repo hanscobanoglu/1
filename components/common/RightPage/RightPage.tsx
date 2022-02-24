@@ -1,5 +1,6 @@
 import React, { FunctionComponent } from "react";
-import { data } from "../../data/data";
+
+import { data } from "../../../data/data";
 
 interface Props {
   data: {

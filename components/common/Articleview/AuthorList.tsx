@@ -28,7 +28,6 @@ const AuthorList: FunctionComponent = () => {
       onCompleted: (res) => {
         //handleRedirect();
         console.log("RESTEN GELEN VERĞ", res);
-        setOpen(false);
         window.location.reload();
       },
       onError: (err) => {
@@ -43,68 +42,65 @@ const AuthorList: FunctionComponent = () => {
         <div className="create-container">
           <br />
           <h3>Create Author</h3>
-           <CreateAuthor />
+          <CreateAuthor />
         </div>
-      
-      <h3>Author List</h3>
-      {bookAuthors.data?.allAuthor?.edges.map((item, index) => {
-        return (
-          <div key={index} className="author-list-component">
-            <div className="list-text">
-              {item?.node?.authorName}
-            </div> 
-            <div className="list-button">
-            <Link
-              href={{
-                pathname: "/blogsite/author-update",
-                query: {
-                  id: item?.node?.id,
-                },
-              }}
-            >
-              <Button inverted color="blue" icon="edit"></Button>
-            </Link>
-          
-            <Modal
-              basic
-              onClose={() => setOpen(false)}
-              onOpen={() => setOpen(true)}
-              open={open}
-              size="small"
-              trigger={
-                <Button inverted color="red">
-                  Sil
-                </Button>
-              }
-            >
-              <Header icon>
-                <Icon name="delete" />
-                Author Silinsin mi ?
-              </Header>
-              <Modal.Actions>
-                <Button
+
+        <h3>Author List</h3>
+        {bookAuthors.data?.allAuthor?.edges.map((item, index) => {
+          return (
+            <div key={index} className="author-list-component">
+              <div className="list-text">{item?.node?.authorName}</div>
+              <div className="list-button">
+                <Link
+                  href={{
+                    pathname: "/blogsite/author-update",
+                    query: {
+                      id: item?.node?.id,
+                    },
+                  }}
+                >
+                  <Button inverted color="blue" icon="edit"></Button>
+                </Link>
+
+                <Modal
                   basic
-                  color="red"
-                  inverted
-                  onClick={() => setOpen(false)}
+                  onClose={() => setOpen(false)}
+                  onOpen={() => setOpen(true)}
+                  open={open}
+                  size="small"
+                  trigger={
+                    <Button inverted color="red">
+                      Sil
+                    </Button>
+                  }
                 >
-                  <Icon name="remove" /> Hayır
-                </Button>
-                <Button
-                  color="green"
-                  inverted
-                  onClick={() => handleMutation(item?.node?.id)}
-                >
-                  <Icon name="checkmark" /> Evet
-                </Button>
-              </Modal.Actions>
-            </Modal>
-            </div>  
-           
-          </div>
-        );
-      })}
-    </div>
+                  <Header icon>
+                    <Icon name="delete" />
+                    Author Silinsin mi ?
+                  </Header>
+                  <Modal.Actions>
+                    <Button
+                      basic
+                      color="red"
+                      inverted
+                      onClick={() => setOpen(false)}
+                    >
+                      <Icon name="remove" /> Hayır
+                    </Button>
+                    <Button
+                      color="green"
+                      inverted
+                      onClick={() => handleMutation(item?.node?.id)}
+                    >
+                      <Icon name="checkmark" /> Evet
+                    </Button>
+                  </Modal.Actions>
+                </Modal>
+              </div>
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
 };

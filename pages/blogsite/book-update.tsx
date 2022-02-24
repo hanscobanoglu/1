@@ -1,12 +1,8 @@
 import type { NextPage } from 'next'
 import Navbar from '../../components/common/Navbar/Navbar'
-import Blogpage from '../../components/pages/Blogpage'
 import { RelayEnvironmentProvider } from 'relay-hooks';
 import environment from '../../relay/environment';
-import AuthorDelete from '../../component/common/Articleview/AuthorDelete';
-
-
-
+import BookUpdate from '../../components/common/Articleview/BookUpdate';
 
 
 const BlogSite: NextPage = () =>  {
@@ -15,7 +11,7 @@ const BlogSite: NextPage = () =>  {
       
       <RelayEnvironmentProvider environment={environment}>
       <Navbar />
-      <AuthorDelete />
+      <BookUpdate />
     </RelayEnvironmentProvider>
     </div>
   )

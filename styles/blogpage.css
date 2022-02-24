@@ -198,7 +198,6 @@ flex-direction: column;
 /* LİST CSS*/
 .list-continer{
   width: 100%;
-  
   display: flex;
   flex-direction: column;
 }
@@ -206,47 +205,98 @@ flex-direction: column;
   align-items: center;
   align-content: center;
   display: flex;
+  height: 100%;
   flex-direction: column;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; 
 }
 .author-list-component
 {
+  width: 70%;
   box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
-  border-radius: 10px;
+  border-radius: 5px;
   margin-top: 10px;
   margin-bottom: 10px;
   height: 70px;
   display: flex;
   align-items: center;
-  
- 
+}
+.author-list-wrapper
+{
+  width: auto;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  width: 25%;
+}
+.ilk{
+  border-radius: 5px 0px 0px 5px;
 }
 .list-text{
-  margin:0 auto 0 auto;
+  margin:0 10px 0 10px;
 	display:table;
   margin-left: 10px;
+  text-align: center;
 
 }
 .list-button{
   display: flex;
-  align-content: center;
-  float: left;
-  height: 40px;
-  margin-left: 20px;
-
+  margin-left: auto;
+  justify-content: space-between;
 }
 .component-container{
-  width: 100%;
+  width: 33%;
   margin-top: 20px;
   margin-bottom: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
-
+  height: 100vh;
+  padding-left: 20px;
+  padding-right: 20px;
 } 
 .create-container{
   width: 200px;
   align-content: center;
   align-content: center;
+  text-align: center;
+ 
+}
+/* form */
+.form-container{
+  width: 100%;
+  height: 70vh;
+  flex-wrap: wrap;
+  display:flex;
+  justify-content: space-around;
+  align-items: center;
+  left: 0px;
+  right: 0px;
+}
+.form-wrapper {
+  background-color: #fff ;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  width: 35%;
+  height: 350px;
+  border-radius: 10px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.field{
+  width: 90%;
+
+  padding-left:10%
+}
+.form-button{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+.form-text{
   text-align: center;
 }

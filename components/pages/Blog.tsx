@@ -30,7 +30,7 @@ useEffect(() => {
   if(currentTime <= 10){
     setCounter(counter + 1)
   }
-},[])
+},[]) 
 
 
   return (

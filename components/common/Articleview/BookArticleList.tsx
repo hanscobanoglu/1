@@ -1,7 +1,10 @@
+/* eslint-disable @next/next/link-passhref */
 import { useFormik } from "formik";
 import Link from "next/link";
 import React, { FunctionComponent, useMemo } from "react";
 import { commitMutation, STORE_OR_NETWORK, useQuery } from "relay-hooks";
+import CreateDeneme from "./CreateArticle";
+import environment from "../../../relay/environment";
 
 import BOOK_QUERY1, {
   BookListQuery,
@@ -9,8 +12,6 @@ import BOOK_QUERY1, {
 import DELETE_BOOK from "../../../src/__generated__/BookDeleteMutation.graphql";
 import { Button, Header, Icon, Modal } from "semantic-ui-react";
 
-import CreateDeneme from "./CreateArticle1";
-import environment from "../../../relay/environment";
 
 const BookArticleList: FunctionComponent = () => {
   const [open, setOpen] = React.useState(false);
@@ -28,13 +29,10 @@ const BookArticleList: FunctionComponent = () => {
         },
       },
       onCompleted: (res) => {
-        //handleRedirect();
-        console.log("RESTEN GELEN VERĞ", res);
-        //setOpen(false);
-       
+        window.location.reload();
       },
       onError: (err) => {
-        console.log("silme hatası",err);
+        console.log("silme hatası", err);
       },
     });
   };
@@ -52,11 +50,31 @@ const BookArticleList: FunctionComponent = () => {
         {allBooks.data?.allBooks?.edges.map((item, index) => {
           return (
             <div key={index} className="author-list-component">
-              <div className="list-text">{item?.node?.bookName}</div>
+              <div className="author-list-wrapper ilk">
+                <div className="list-text">
+                  Book:
+                  <br />
+                  {item?.node?.bookName}
+                </div>
+              </div>
+              <div className="author-list-wrapper">
+                <div className="list-text">
+                  Category:
+                  <br />
+                  {item?.node?.category?.categoryName}
+                </div>
+              </div>
+              <div className="author-list-wrapper">
+                <div className="list-text">
+                  Author:
+                  <br />
+                  {item?.node?.author?.authorName}
+                </div>
+              </div>
               <div className="list-button">
                 <Link
                   href={{
-                    pathname: "/blogsite/category-update",
+                    pathname: "/blogsite/book-update",
                     query: {
                       id: item?.node?.id,
                     },
@@ -107,6 +125,3 @@ const BookArticleList: FunctionComponent = () => {
   );
 };
 export default BookArticleList;
-function BOOK_QUERY<T>(BOOK_QUERY: any, arg1: { fetchPolicy: string }) {
-  throw new Error("Function not implemented.");
-}

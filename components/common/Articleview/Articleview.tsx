@@ -1,41 +1,60 @@
-import React, { FunctionComponent, useEffect } from "react";
+import React, { FunctionComponent, useEffect, useState } from "react";
 import { useRouter } from "next/router";
 
 import ALL_BOOKS, {
   ArticleviewQuery,
 } from "./../../../src/__generated__/ArticleviewQuery.graphql";
-import {STORE_OR_NETWORK, useQuery } from "relay-hooks";
-import CreateArticle from "./CreateArticle";
-import CreateDeneme from "./CreateArticle1";
-import CreateCategory from "./CreateCategory";
+import { STORE_OR_NETWORK, useQuery } from "relay-hooks";
+
 import AuthorList from "./AuthorList";
 import CategoryList from "./CategoryList";
 import BookArticleList from "./BookArticleList";
+import { Loader } from "semantic-ui-react";
 
 const Articleview: FunctionComponent = () => {
   const router = useRouter();
+  const [loading, setLoading] = useState(true)
   const { error, data } = useQuery<ArticleviewQuery>(ALL_BOOKS, {
     fetchPolicy: STORE_OR_NETWORK,
   });
 
+  
   useEffect(() => {
     // Burada data gelmiyorsa yapacağım işlemleri yapacağım.
-
-    
-
     // Burada datalar yükleniyorsa loading ekranı çıkacak.
-  }, [data]);
+    if(router.query.id == undefined){
+      router.push({pathname: '/',
+      query: { log: loading},
+    })
+      
+    }else{
+      setLoading(false)
+    }
+  }, [data, router]);
 
   return (
-    <div className="article-container">
-      <div className="article-wrapper">
-        <div className="component-container"><BookArticleList /></div>
-        
-        <div className="component-container"><AuthorList /></div>
-       <div className="component-container"><CategoryList /></div>
-       
+    <>
+    {
+      loading ?
+      <div>
+        <Loader active />
+      </div>
+      :
+      <div className="article-container">
+        <div className="article-wrapper">
+          <div className="component-container">
+            <BookArticleList />
+          </div>
+          <div className="component-container">
+            <AuthorList />
+          </div>
+          <div className="component-container">
+            <CategoryList />
+          </div>
         </div>
-    </div>
+      </div>
+    }
+    </>
   );
 };
 

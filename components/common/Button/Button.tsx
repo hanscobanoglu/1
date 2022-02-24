@@ -26,8 +26,7 @@ const DbPage = (props:Props) => {
                 <button className='button-button' onClick={()=> pageFunc(page1=2)}>{data.subtext1}</button>
                 <button className='button-button' onClick={()=> pageFunc(page1=3)}>{data.subtext1}</button>
             </div>
-        </div>
-        
+        </div> 
     )
 }
 

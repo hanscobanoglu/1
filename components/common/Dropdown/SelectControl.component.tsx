@@ -1,6 +1,6 @@
 import { FormikProps, FormikValues } from 'formik';
 import React, { FunctionComponent, SyntheticEvent, useCallback } from 'react';
-import { Form, Icon, Label, Dropdown } from 'semantic-ui-react';
+import { Dropdown, Form, Icon, Label,  } from 'semantic-ui-react';
 
 export interface SelectControlProps {
   name: string;
@@ -62,7 +62,7 @@ const SelectControl: FunctionComponent<SelectControlProps> = (
         label={label}
         {...inputProps}
       />
-      <input type="hidden" name={name} value={value} />
+      <input type="hidden" name={ name } value={value} />
       {helpText && <p>{helpText}</p>}
       {!!touched && error && (
         <Label pointing prompt>

@@ -38,6 +38,7 @@
   },
   "devDependencies": {
     "@babel/plugin-transform-runtime": "^7.16.5",
+    "@types/jquery": "^3.5.13",
     "@types/node": "16.11.6",
     "@types/react": "17.0.33",
     "eslint": "7.32.0",
