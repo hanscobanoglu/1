@@ -24,6 +24,7 @@ const Home: NextPage = () => {
       <div className="emty"></div>
       <div className="home-screen-wrapper">
         <TvScreen embed={screenState.embed} turnon={screenState.turnon} turnoff={screenState.turnoff}/>
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSei4Rg-iOw8MYNGhuekNrx6jzd6767oE5moeCD1V2f2E7G22Q/viewform?embedded=true" width="640" height="1097" >Yükleniyor…</iframe>
       </div>
     </div>
   )

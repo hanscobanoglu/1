@@ -39,7 +39,7 @@ const Navbar: FunctionComponent = () => {
           <Link href="/photos">Photos</Link>
           <Link href="/blog">Blog</Link>
           <Link href="/scroll">Scroll</Link>
-          <Link href="/slider">SliderPage</Link>
+          <Link href="/cafe">Cafe</Link>
           {
             loading ? 
             <Link href="/blogsite/admin-login">Login</Link>

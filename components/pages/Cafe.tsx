@@ -1,16 +1,16 @@
 import React ,{useState} from 'react'
 import ButtonSlider from '../common/Button/ButtonSlider/ButtonSlider';
-import Sliderimg from '../common/Sliderİmg/Sliderimg';
+import CaffeComponent from '../common/Cafe/CaffeComponent';
 
-function Slider() {
+function Caffe() {
   const [state, setstate] = useState(0);
  
   return (
     <div className="">
-        <ButtonSlider />
-        <Sliderimg />
+     
+        <CaffeComponent />
     </div>
   )
 }
 
-export default Slider
+export default Caffe
