@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/link-passhref */
 import { useFormik } from "formik";
 import Link from "next/link";
 import React, { FunctionComponent, useMemo } from "react";
