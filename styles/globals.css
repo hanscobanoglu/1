@@ -10,7 +10,7 @@
 @import "./scroll.css";
 @import "./cafe.css";
 @import "./blogpage.css";
-
+@import "./menu.css";
 html,
 body {
   padding: 0;
